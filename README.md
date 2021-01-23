@@ -62,7 +62,8 @@ For example, to evaluate model trained on set-1, I can run
 ```
 python ./evaluate.py --logdir /home/aistudio/vid2vid/outputs/evaluation/ 
                --checkpoint_logdir /home/aistudio/work/logs/checkpoints/ 
-               --eval_data_dir /home/aistudio/data/data68795/home/aistudio/test_pose/1_pose/images/```
+               --eval_data_dir /home/aistudio/data/data68795/home/aistudio/test_pose/1_pose/images/
+```
 
 
 ### Acknowledge
