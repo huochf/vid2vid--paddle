@@ -1,0 +1,44 @@
+dataset_mode: 'face'
+
+dataroot: '/home/aistudio/data/data47095/face'# '/home/aistudio/data/data47095/pose/'
+
+# path to the driving sequence
+seq_path: '/home/aistudio/data/data47095/face' # '/home/aistudio/data/data47095/pose/test_images/0001/'
+
+# path to the reference image
+ref_img_path: '/home/aistudio/data/data47095/pose/test_images/0002/'
+
+isTrain: True
+
+no_upper_face: True
+
+# number of reference image
+n_shot: 1
+
+#  [resize_and_crop|crop|scale_width|scale_width_and_crop]
+resize_or_crop: 'scale_width'
+
+# scale images to this size
+loadSize: 512
+
+# then crop to this size
+fineSize: 512
+
+aspect_ratio: 1
+
+no_flip: True
+
+mean: [0.5, 0.5, 0.5]
+
+std: [0.5, 0.5, 0.5]
+
+ref_img_id: 0
+
+# max spacing between neighboring sampled frames. If greater than 1, the network may randomly skip frames during training.
+max_t_step: 4
+
+how_many: 300
+
+
+
+

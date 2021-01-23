@@ -1,0 +1,50 @@
+dataset_mode: 'pose'
+
+pose_type: 'both'
+
+# remove face part of labels to prevent overfitting
+remove_face_labels: True
+
+# only use basic joints without face and hand
+basic_point_only: True
+
+dataroot: '/home/aistudio/data/data67639/home/aistudio/preprocess/demo_output/'# '/home/aistudio/data/data47095/pose/'
+
+# path to the driving sequence
+seq_path: '/home/aistudio/data/data67639/home/aistudio/preprocess/demo_output/' # '/home/aistudio/data/data47095/pose/test_images/0001/'
+
+# path to the reference image
+ref_img_path: '/home/aistudio/data/data47095/pose/test_images/0002/'
+
+isTrain: True
+
+# number of reference image
+n_shot: 1
+
+#  [resize_and_crop|crop|scale_width|scale_width_and_crop]
+resize_or_crop: 'scale_width'
+
+# scale images to this size
+loadSize: 256
+
+# then crop to this size
+fineSize: 256
+
+aspect_ratio: 0.5
+
+no_flip: True
+
+mean: [0.5, 0.5, 0.5]
+
+std: [0.5, 0.5, 0.5]
+
+ref_img_id: 0
+
+# max spacing between neighboring sampled frames. If greater than 1, the network may randomly skip frames during training.
+max_t_step: 4
+
+
+
+
+
+
