@@ -42,9 +42,12 @@ def main():
 
     checkpoints = sorted(os.listdir(args.checkpoint_logdir))
     for checkpoint in checkpoints:
+        if checkpoint[0] == '.': # skip .ipynb_checkpoints files
+            continue
+        print(checkpoint)
         path = os.path.join(args.checkpoint_logdir, checkpoint, checkpoint)
         current_epoch, current_iteration = trainer.load_checkpoint(cfg, path, resume=False)
-        if current_epoch < 24:
+        if current_epoch < 0:
             continue
         trainer.current_epoch = current_epoch
         trainer.current_iteration = current_iteration

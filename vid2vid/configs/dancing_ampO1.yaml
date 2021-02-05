@@ -95,6 +95,7 @@ gen:
         attention:
             num_filters: 32
             num_downsamples: 2
+    use_flow: False
     flow:        
         warp_ref: True
         generate_raw_output: False
@@ -358,7 +359,7 @@ inference_data:
     ref_img_path: '/home/aistudio/data/data67639/home/aistudio/preprocess/demo_output/images' # '/home/aistudio/data/data47095/pose/test_images/0002/'
     # number of reference image
     n_shot: 1
-    ref_img_id: [0]
+    ref_img_id: [500]
     #  [resize_and_crop|crop|scale_width|scale_width_and_crop]
     resize_or_crop: 'scale_width'
     # scale images to this size

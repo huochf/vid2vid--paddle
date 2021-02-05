@@ -122,7 +122,7 @@ class PoseDataset(BaseDataset):
         Lr, Ir = self.Lr, self.Ir         
         if is_first_frame: # need to read reference images for every training iter or at beginning of inference            
             ref_crop_coords = [None] * cfg.n_shot
-            for i, idx in enumerate(ref_indices):                
+            for i, idx in enumerate(ref_indices):
                 ref_size = self.read_data(ref_img_paths[idx]).size
                 Li, Ii, ref_crop_coords[i], ref_face_pts = self.get_images(ref_img_paths, ref_op_paths, ref_dp_paths,
                     ref_ppl_indices, idx, ref_size, img_params, self.ref_crop_coords[i])
